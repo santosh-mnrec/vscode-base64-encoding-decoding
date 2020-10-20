@@ -1,11 +1,18 @@
 {
 	"name": "vscode-base64-encoding-decoding",
-	"displayName": "vscode-base64-encoding-decoding",
+	"displayName": "Base64 Encode/Decode",
 	"description": "Extension for encoding/decoding Base64 and JWT",
-	"version": "0.0.1",
-	"publisher": "santosh",
+	"version": "1.0.1",
+	"publisher": "santoshkumarsingh",
+	
+	"repository": "https://github.com/santosh-mnrec/vscode-base64-encoding-decoding.git",
 	"engines": {
 		"vscode": "^1.50.0"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+	  "color": "#C80000",
+	  "theme": "dark"
 	},
 	"categories": [
 		"Other"

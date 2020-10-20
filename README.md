@@ -1,6 +1,6 @@
 > This extensions allows you to convert string to base64 and decode base64 to string withing editor. Apart from this you can also decode JWT string withing the editor
 
-![]('./images/tutorial.gif')
+![](https://github.com/santosh-mnrec/vscode-base64-encoding-decoding/blob/main/images/tutorial.gif)
 
 # Commands:
 

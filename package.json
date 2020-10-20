@@ -1,0 +1,87 @@
+{
+	"name": "vscode-base64-encoding-decoding",
+	"displayName": "Base64 Encode/Decode",
+	"description": "Extension for encoding/decoding Base64 and JWT",
+	"version": "1.0.4",
+	"publisher": "santoshkumarsingh",
+	
+	"repository": "https://github.com/santosh-mnrec/vscode-base64-encoding-decoding.git",
+	"engines": {
+		"vscode": "^1.50.0"
+	},
+	"icon": "images/icon.png",
+	"galleryBanner": {
+	  "color": "#C80000",
+	  "theme": "dark"
+	},
+	"categories": [
+		"Other"
+	],
+	"activationEvents": [
+		"onCommand:extension.base64Encode",
+		"onCommand:extension.base64Decode",
+		"onCommand:extension.decodeJwt"
+	],
+	"main": "./out/extension.js",
+	"contributes": {
+		"commands": [
+			{
+				"command": "extension.decodeJwt",
+				"title": "Jwt Decode"
+			},
+			{
+				"command": "extension.base64Encode",
+				"title": "Base64 Encode"
+			},
+			{
+				"command": "extension.base64Decode",
+				"title": "Base64 Decode"
+			}
+		],
+		"keybindings": [
+			{
+				"command": "extension.base64Encode",
+				"key": "ctrl+e ctrl+e",
+				"mac": "cmd+e cmd+e",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.base64Decode",
+				"key": "ctrl+e ctrl+d",
+				"mac": "cmd+e cmd+d",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.decodeJwt",
+				"key": "ctrl+e ctrl+j",
+				"mac": "cmd+e cmd+j",
+				"when": "editorTextFocus"
+			}
+		]
+	},
+	"scripts": {
+		"vscode:prepublish": "npm run compile",
+		"compile": "tsc -p ./",
+		"lint": "eslint src --ext ts",
+		"watch": "tsc -watch -p ./",
+		"pretest": "npm run compile && npm run lint",
+		"test": "node ./out/test/runTest.js"
+	},
+	"devDependencies": {
+		"@types/vscode": "^1.50.0",
+		"@types/glob": "^7.1.3",
+		"@types/mocha": "^8.0.0",
+		"@types/node": "^12.11.7",
+		"eslint": "^7.9.0",
+		"@typescript-eslint/eslint-plugin": "^4.1.1",
+		"@typescript-eslint/parser": "^4.1.1",
+		"glob": "^7.1.6",
+		"mocha": "^8.1.3",
+		"typescript": "^4.0.2",
+		"vscode-test": "^1.4.0"
+	},
+	"dependencies": {
+		"@types/jwt-decode": "^2.2.1",
+		"jwt-decode": "^3.0.0"
+	}
+}

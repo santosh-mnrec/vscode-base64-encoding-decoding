@@ -7,6 +7,7 @@
 - Base64 Encode
 - Base64 Decode
 - JWT Decode
+- MD5 Hash
 
 # Keybindings:
 

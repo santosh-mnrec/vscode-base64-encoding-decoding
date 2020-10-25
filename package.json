@@ -2,7 +2,7 @@
 	"name": "vscode-base64-encoding-decoding",
 	"displayName": "Base64 Encode/Decode",
 	"description": "Extension for encoding/decoding Base64 and JWT",
-	"version": "1.0.4",
+	"version": "1.0.6",
 	"publisher": "santoshkumarsingh",
 	
 	"repository": "https://github.com/santosh-mnrec/vscode-base64-encoding-decoding.git",
@@ -20,7 +20,8 @@
 	"activationEvents": [
 		"onCommand:extension.base64Encode",
 		"onCommand:extension.base64Decode",
-		"onCommand:extension.decodeJwt"
+		"onCommand:extension.decodeJwt",
+		"onCommand:extension.convertToMd5"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -36,6 +37,10 @@
 			{
 				"command": "extension.base64Decode",
 				"title": "Base64 Decode"
+			},
+			{
+				"command": "extension.convertToMd5",
+				"title": "Generate MD5 Hash"
 			}
 		],
 		"keybindings": [
@@ -55,6 +60,12 @@
 				"command": "extension.decodeJwt",
 				"key": "ctrl+e ctrl+j",
 				"mac": "cmd+e cmd+j",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.convertToMd5",
+				"key": "ctrl+e ctrl+m",
+				"mac": "cmd+e cmd+m",
 				"when": "editorTextFocus"
 			}
 		]

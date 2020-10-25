@@ -30,10 +30,17 @@ export function activate(context: vscode.ExtensionContext) {
       vscode.window.showInformationMessage("Done");
     }
   });
+  let convertToMd5=vscode.commands.registerCommand("extension.convertToMd5",()=>{
+    let e = Window.activeTextEditor;
+    let d = e?.document;
+    let sel = e?.selections;
+    if (e && d && sel) encoder.convertToMd5(e, d, sel);
+  })
 
   context.subscriptions.push(encode);
   context.subscriptions.push(decode);
   context.subscriptions.push(jwtDecode);
+  context.subscriptions.push(convertToMd5);
 }
 
 // this method is called when your extension is deactivated

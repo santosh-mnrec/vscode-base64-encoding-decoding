@@ -1,4 +1,5 @@
 import jwt_decode = require("jwt-decode");
+const crypto = require("crypto");
 import { Range, Selection, TextDocument, TextEditor } from "vscode";
 
 export class Encoder {
@@ -26,6 +27,14 @@ export class Encoder {
     var decoded = jwt_decode(token) as string;
     e.edit(function (edit) {
       edit.replace(sel[0], JSON.stringify(decoded, null, "\t"));
+    });
+  }
+  convertToMd5(e: TextEditor, d: TextDocument, sel: Selection[]) {
+   
+    var data = d.getText();
+    var md5=crypto.createHash("md5").update(data).digest("hex");
+    e.edit(function (edit) {
+      edit.replace(sel[0], md5);
     });
   }
 }

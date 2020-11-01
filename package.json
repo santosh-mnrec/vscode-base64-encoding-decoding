@@ -4,15 +4,14 @@
 	"description": "Extension for encoding/decoding Base64 and JWT",
 	"version": "1.0.7",
 	"publisher": "santoshkumarsingh",
-	
 	"repository": "https://github.com/santosh-mnrec/vscode-base64-encoding-decoding.git",
 	"engines": {
 		"vscode": "^1.50.0"
 	},
 	"icon": "images/icon.png",
 	"galleryBanner": {
-	  "color": "#C80000",
-	  "theme": "dark"
+		"color": "#C80000",
+		"theme": "dark"
 	},
 	"categories": [
 		"Other"
@@ -21,7 +20,8 @@
 		"onCommand:extension.base64Encode",
 		"onCommand:extension.base64Decode",
 		"onCommand:extension.decodeJwt",
-		"onCommand:extension.convertToMd5"
+		"onCommand:extension.convertToMd5",
+		"onCommand:extension.convertToJavascript"
 	],
 	"main": "./out/extension.js",
 	"contributes": {
@@ -41,6 +41,10 @@
 			{
 				"command": "extension.convertToMd5",
 				"title": "Generate MD5 Hash"
+			},
+			{
+				"command": "extension.convertToJavascript",
+				"title": "Convert To Javascript Object"
 			}
 		],
 		"keybindings": [
@@ -66,6 +70,12 @@
 				"command": "extension.convertToMd5",
 				"key": "ctrl+e ctrl+m",
 				"mac": "cmd+e cmd+m",
+				"when": "editorTextFocus"
+			},
+			{
+				"command": "extension.convertToJavascript",
+				"key": "ctrl+e ctrl+o",
+				"mac": "cmd+e cmd+o",
 				"when": "editorTextFocus"
 			}
 		]
@@ -93,6 +103,8 @@
 	},
 	"dependencies": {
 		"@types/jwt-decode": "^2.2.1",
+		"antlr4": "^4.8.0",
+		"antlr4ts": "^0.5.0-alpha.3",
 		"jwt-decode": "^3.0.0"
 	}
 }

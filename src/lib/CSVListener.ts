@@ -1,6 +1,6 @@
 // Generated from CSV.g4 by ANTLR 4.7.3-SNAPSHOT
 
-/* tslint:disable */
+// @ts-nocheck
 import { ParseTreeListener } from "antlr4ts/tree/ParseTreeListener";
 
 import { TextContext } from "./CSVParser";

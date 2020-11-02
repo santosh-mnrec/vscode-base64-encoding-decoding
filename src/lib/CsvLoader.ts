@@ -1,4 +1,4 @@
-/* tslint:disable */
+// @ts-nocheck
 import { CSVParser } from "./CSVParser";
 import { CSVListener } from "./CSVListener";
 import { TextContext } from "./CSVParser";

@@ -1,3 +1,4 @@
+// @ts-nocheck
 import jwt_decode = require("jwt-decode");
 import parse from './csvToJson';
 const crypto = require("crypto");

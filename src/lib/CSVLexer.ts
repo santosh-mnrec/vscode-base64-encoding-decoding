@@ -1,6 +1,6 @@
 // Generated from CSV.g4 by ANTLR 4.7.3-SNAPSHOT
 
-/* tslint:disable */
+// @ts-nocheck
 
 import { ATN } from "antlr4ts/atn/ATN";
 import { ATNDeserializer } from "antlr4ts/atn/ATNDeserializer";

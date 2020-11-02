@@ -1,3 +1,4 @@
+// @ts-nocheck
 import * as vscode from "vscode";
 import Window = vscode.window;
 import Range = vscode.Range;

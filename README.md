@@ -8,7 +8,9 @@
 - Base64 Decode
 - JWT Decode
 - MD5 Hash
+- CSV to JSON
 
+<img src="https://i.imgur.com/6cQLzhB.gif"/>
 # Keybindings:
 
 ### Mac

@@ -10,10 +10,10 @@ import { FieldContext } from "./CSVParser";
 /* tslint:disable */ 
 const EMPTY = "";
 
-export class Loader implements CSVListener {
-  rows=[];
+export class CsvLoader implements CSVListener {
+  rows:Array<any>;
   header=null;
-  currentRowFieldValue= null;
+  currentRowFieldValue:Array<any>;
  constructor(){
     /** Load a list of row maps that map field name to value */
   this.rows = [];

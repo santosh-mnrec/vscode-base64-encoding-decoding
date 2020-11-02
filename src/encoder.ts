@@ -1,5 +1,5 @@
 import jwt_decode = require("jwt-decode");
-import parse from './csv-to-json';
+import parse from './csvToJson';
 const crypto = require("crypto");
 import * as vscode from "vscode";
 import { Range, Selection, TextDocument, TextEditor } from "vscode";

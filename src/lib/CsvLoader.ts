@@ -34,7 +34,7 @@ export class CsvLoader implements CSVListener {
 
   exitRow(ctx:RowContext) {
     // If this is the header row, do nothing
-    if (ctx.parentCtx instanceof HdrContext) {
+    if (ctx.parent instanceof HdrContext) {
       return;
     }
     // It's a data row

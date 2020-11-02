@@ -1,8 +1,8 @@
 import { ANTLRInputStream, CommonTokenStream } from "antlr4ts";
 import { ParseTreeWalker } from "antlr4ts/tree/ParseTreeWalker";
-import { CSVLexer } from "./CSVLexer";
-import { CSVParser } from "./CSVParser";
-
+import { CSVLexer } from "./lib/CSVLexer";
+import { CSVParser } from "./lib/CSVParser";
+import {CsvLoader} from './lib/CsvLoader';
 
 const parse = function (text: any) {
   try {
@@ -15,7 +15,7 @@ const parse = function (text: any) {
 
     const walker = new ParseTreeWalker();
     const loader = new CsvLoader();
-    walker.walk(loader, tree);
+    walker.walk(loader as ParseTreeWalker, tree);
 
     const rows = loader.rows;
     return rows;

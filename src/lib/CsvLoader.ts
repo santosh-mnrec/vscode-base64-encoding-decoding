@@ -1,3 +1,4 @@
+/* tslint:disable */
 import { CSVParser } from "./CSVParser";
 import { CSVListener } from "./CSVListener";
 import { TextContext } from "./CSVParser";
@@ -11,9 +12,9 @@ import { FieldContext } from "./CSVParser";
 const EMPTY = "";
 
 export class CsvLoader implements CSVListener {
-  rows:Array<any>;
+  rows=[];
   header=null;
-  currentRowFieldValue:Array<any>;
+  currentRowFieldValue=null;
  constructor(){
     /** Load a list of row maps that map field name to value */
   this.rows = [];
@@ -33,7 +34,7 @@ export class CsvLoader implements CSVListener {
 
   exitRow(ctx:RowContext) {
     // If this is the header row, do nothing
-    if (ctx.parent instanceof HdrContext) {
+    if (ctx.parentCtx instanceof HdrContext) {
       return;
     }
     // It's a data row

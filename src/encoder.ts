@@ -44,7 +44,7 @@ export class Encoder {
       var json = parse(d.getText());
       const editor = vscode.window.activeTextEditor;
       editor.edit((selectedText) => {
-        selectedText.replace(editor.selection, JSON.stringify(json,null,4));
+        selectedText.replace(editor?.selection, JSON.stringify(json,null,4));
       });
 
     } catch (error) {

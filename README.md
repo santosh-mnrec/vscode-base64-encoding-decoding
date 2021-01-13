@@ -23,6 +23,9 @@
 
 `cmd+e cmd+m` Convert String to MD5
 
+
+`cmd+e cmd+o` CSV To JSON
+
 ### Win/Linux
 
 `ctrl+e ctrl+e` Encode to Base64
@@ -32,3 +35,5 @@
 `ctrl+e ctrl+d` Encode JWT 
 
 `cmd+e cmd+m` Convert String to MD5
+
+`ctrl+e ctrl+o` CSV To JSON

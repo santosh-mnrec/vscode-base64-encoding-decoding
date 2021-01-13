@@ -1,7 +1,7 @@
 {
 	"name": "vscode-base64-encoding-decoding",
-	"displayName": "Base64 Encode/Decode",
-	"description": "Extension for encoding/decoding Base64 and JWT",
+	"displayName": "Developer Tools-Encode/Decode",
+	"description": "Extension for encoding/decoding Base64,Decode JWT and Convert CSV to JSON",
 	"version": "1.0.8",
 	"publisher": "santoshkumarsingh",
 	"repository": "https://github.com/santosh-mnrec/vscode-base64-encoding-decoding.git",
